@@ -37,21 +37,21 @@ public class RegistrationSteps {
                 actualMessage.contains(expectedMessage));
     }
 
-    @Step("На странице под полем 'Phone' найдено сообщение об ошибке '{1}'")
+    @Step("На странице под полем 'Phone' найдено сообщение об ошибке '{0}'")
     public void stepCheckPhoneErrorMessage(String expectedMessage) {
         String actualMessage = new RegistrationPage().errorMessagePhone.getText();
         assertTrue(String.format("Ожидаемое сообщение равно [%s]. Фактическое сообщение - [%s]", expectedMessage, actualMessage),
                 actualMessage.contains(expectedMessage));
     }
 
-    @Step("На странице под полем 'Email' найдено сообщение об ошибке '{1}'")
+    @Step("На странице под полем 'Email' найдено сообщение об ошибке '{0}'")
     public void stepCheckEmailErrorMessage(String expectedMessage) {
         String actualMessage = new RegistrationPage().errorMessageEmail.getText();
         assertTrue(String.format("Ожидаемое сообщение равно [%s]. Фактическое сообщение - [%s]", expectedMessage, actualMessage),
                 actualMessage.contains(expectedMessage));
     }
 
-    @Step("На странице под полем 'repeatEmail' найдено сообщение об ошибке '{1}'")
+    @Step("На странице под полем 'repeatEmail' найдено сообщение об ошибке '{0}'")
     public void stepCheckRepeatEmailErrorMessage(String expectedMessage) {
         String actualMessage = new RegistrationPage().errorMessageConfirmEmail.getText();
         assertTrue(String.format("Ожидаемое сообщение равно [%s]. Фактическое сообщение - [%s]", expectedMessage, actualMessage),
